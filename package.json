@@ -1,7 +1,7 @@
 {
   "name": "react-native-overlay",
-  "version": "0.1.0",
-  "description": "A simplified, animated, animated, customizable Overlay Component for React Native",
+  "version": "1.0.0",
+  "description": "A simplified, animated, customizable Overlay Component for React Native.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",

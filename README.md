@@ -1,6 +1,6 @@
 # react-native-overlay
 
-A simplified, animated, animated, customizable Overlay Component for React Native
+A simplified, animated, customizable Overlay Component for React Native.
 
 ## Installation
 
