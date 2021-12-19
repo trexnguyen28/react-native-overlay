@@ -1,0 +1,22 @@
+{
+  "name": "react-native-overlay-example",
+  "displayName": "Overlay Example",
+  "expo": {
+    "name": "react-native-overlay-example",
+    "slug": "react-native-overlay-example",
+    "description": "Example app for react-native-overlay",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
