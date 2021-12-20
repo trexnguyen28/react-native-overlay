@@ -34,7 +34,7 @@ const BackDropView: React.FC<BackDropViewProps> = ({
   backgroundColor = 'gray',
   allowBelowTouch = false,
 }) => {
-  const animatedStyles = useAnimatedStyle(() => {
+  const animatedStyle = useAnimatedStyle(() => {
     return {
       opacity: interpolate(
         animatedProgress.value,
@@ -58,7 +58,7 @@ const BackDropView: React.FC<BackDropViewProps> = ({
       }}
     >
       <Animated.View
-        style={[styles.container, animatedStyles, { backgroundColor }]}
+        style={[styles.container, animatedStyle, { backgroundColor }]}
         pointerEvents={allowBelowTouch ? 'none' : 'auto'}
       />
     </TapGestureHandler>
