@@ -59,7 +59,7 @@ export interface OverlayContentProps
   extends ViewProps,
     Partial<ContentAttributes>,
     Partial<BackdropAttributes>,
-    Partial<ProgressAttributes> {
+    ProgressAttributes {
   onDismiss?: () => void;
 }
 
