@@ -1,14 +1,14 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import Animated, {
   withSpring,
   useSharedValue,
   useAnimatedStyle,
 } from 'react-native-reanimated';
-import { KeyboardLayout, useKeyboardEvent } from '../../hooks';
 //
-import type { OverlayContentProps } from 'react-native-overlay';
-import { SpringConfiguration } from 'react-native-overlay';
-import { StyleSheet } from 'react-native';
+import { KeyboardLayout, useKeyboardEvent } from '../../hooks';
+import { SpringConfiguration } from '../../constants';
+import type { OverlayContentProps } from '../../types';
 
 const styles = StyleSheet.create({
   container: {

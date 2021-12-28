@@ -1,11 +1,12 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import Animated, {
   runOnJS,
   withSpring,
   interpolate,
+  Extrapolate,
   useAnimatedStyle,
   useAnimatedGestureHandler,
-  Extrapolate,
 } from 'react-native-reanimated';
 import {
   State,
@@ -14,9 +15,9 @@ import {
   TapGestureHandlerStateChangeEvent,
   PanGestureHandlerGestureEvent,
 } from 'react-native-gesture-handler';
-import type { OverlayContentProps } from 'react-native-overlay';
-import { SpringConfiguration } from 'react-native-overlay';
-import { StyleSheet } from 'react-native';
+//
+import { SpringConfiguration } from '../../constants';
+import type { OverlayContentProps } from '../../types';
 
 const styles = StyleSheet.create({
   backdrop: {
