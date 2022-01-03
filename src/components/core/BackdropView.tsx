@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   },
 });
 
+// TODO Check the usage of this component
 const BackdropView: React.FC<BackdropViewProps> = ({
   visible = true,
   onTouched,

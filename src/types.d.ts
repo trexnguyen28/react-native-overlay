@@ -9,6 +9,10 @@ export interface OverlayHandler {
   dismiss: (onFinished?: () => void) => void;
 }
 
+export interface OverlayContainerHandler {
+  rerenderIfAny: () => void;
+}
+
 export interface AnimatedLayout {
   x: number;
   y: number;
@@ -84,4 +88,18 @@ export interface OverlayProps {
   onDidDismiss?: () => void;
   onWillPresent?: () => void;
   onWillDismiss?: () => void;
+}
+
+export interface ContentContext extends Partial<ProgressAttributes> {
+  containerId: string;
+  contentId: string;
+  overlayHandler?: OverlayHandler;
+}
+
+export type ContentComponent = (context: ContentContext) => React.ReactNode;
+
+export interface ContentConfiguration {
+  id: string;
+  context: ContentContext;
+  component: ContentComponent;
 }

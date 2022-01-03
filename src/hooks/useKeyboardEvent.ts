@@ -59,6 +59,7 @@ const useKeyboardEvent = (handler: KeyboardEventHandler) => {
       showSubscription.remove();
       hideSub.remove();
     };
+    // TODO Improve here
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 };
