@@ -5,7 +5,7 @@ A simplified, animated, customizable Overlay Component for React Native.
 ## Installation
 
 ```sh
-npm install react-native-overlay
+npm install @trexnguyen28/react-native-overlay
 ```
 
 ## TODO
