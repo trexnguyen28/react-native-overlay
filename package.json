@@ -1,34 +1,21 @@
 {
   "name": "@trexnguyen28/react-native-overlay",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simplified, animated, customizable Overlay Component for React Native.",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
-  "react-native": "src/index.tsx",
-  "source": "src/index",
-  "files": [
-    "src",
-    "lib",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
-    "android",
-    "ios",
-    "cpp",
-    "react-native-overlay.podspec",
-    "!lib/typescript/example",
-    "!android/build",
-    "!ios/build"
-  ],
+  "files": ["lib"],
   "scripts": {
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
+    "prepare": "bob build && yarn copy-dts && yarn delete-dts.js",
     "release": "release-it",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
+    "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" lib/typescript",
+    "delete-dts.js": "find ./lib/commonjs -name '*.d.js*' -delete && find ./lib/module -name '*.d.js*' -delete",
     "bootstrap": "yarn example && yarn && yarn pods"
   },
   "keywords": [
@@ -47,6 +34,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "@commitlint/config-conventional": "^11.0.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "@release-it/conventional-changelog": "^2.0.0",
