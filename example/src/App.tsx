@@ -1,18 +1,7 @@
 import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
-// import { BackDropView } from 'react-native-overlay';
-
-export default function App() {
-  const [result] = React.useState<number | undefined>();
-
-  return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-      {/*<BackDropView animatedProgress={0} />*/}
-    </View>
-  );
-}
+import { StyleSheet, View, StatusBar, Pressable, Text } from 'react-native';
+import { OverlayProvider, OverlayPresenter } from 'react-native-overlay';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const styles = StyleSheet.create({
   container: {
@@ -21,8 +10,32 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    width: 200,
+    height: 200,
+    backgroundColor: 'red',
   },
 });
+
+export default function App() {
+  const onPress = () => {
+    OverlayPresenter.present({
+      component: () => {
+        return <View style={styles.box} />;
+      },
+      alignment: 'auto',
+      props: {},
+    });
+  };
+
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        <StatusBar barStyle={'dark-content'} />
+        <Pressable onPress={onPress}>
+          <Text>Press me to do some text</Text>
+        </Pressable>
+        <OverlayProvider />
+      </View>
+    </GestureHandlerRootView>
+  );
+}
