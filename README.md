@@ -8,15 +8,7 @@ A simplified, animated, customizable Overlay Component for React Native.
 npm install react-native-overlay
 ```
 
-## Usage
-
-```js
-import { multiply } from "react-native-overlay";
-
-// ...
-
-const result = await multiply(3, 7);
-```
+## TODO
 
 ## Contributing
 
