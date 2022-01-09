@@ -1,5 +1,5 @@
 {
-  "name": "react-native-overlay",
+  "name": "@trexnguyen28/react-native-overlay",
   "version": "1.0.0",
   "description": "A simplified, animated, customizable Overlay Component for React Native.",
   "main": "lib/commonjs/index.js",

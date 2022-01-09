@@ -1,7 +1,11 @@
 import * as React from 'react';
 import { StyleSheet, View, StatusBar, Pressable, Text } from 'react-native';
-import { OverlayProvider, OverlayPresenter } from 'react-native-overlay';
+
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import {
+  OverlayProvider,
+  OverlayPresenter,
+} from '@trexnguyen28/react-native-overlay';
 
 const styles = StyleSheet.create({
   container: {
