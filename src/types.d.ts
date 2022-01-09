@@ -103,3 +103,21 @@ export interface ContentConfiguration {
   context: ContentContext;
   component: ContentComponent;
 }
+
+export type ContentAlignment =
+  | 'top'
+  | 'bottom'
+  | 'left'
+  | 'right'
+  | 'fill'
+  | 'auto';
+
+export interface OverlayPresenterConfiguration<
+  T extends { context?: ContentContext }
+> {
+  props: T;
+  containerId?: string;
+  component: React.FC<T>;
+  alignment?: ContentAlignment;
+  overlayProps?: OverlayProps;
+}
